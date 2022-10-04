@@ -82,7 +82,18 @@ const newMenus = computed<NewMenus>(() => store.getters.getNewMenus);
     right: 0;
     left: 250px;
     bottom: 0;
-    // background-color: skyblue;
+    height: calc(100vh - $height);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar-track-piece {
+      background-color: #d3d4da;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius:0px;background-color:#77797d;background-clip:padding-box;
+    }
   }
 }
 </style>
